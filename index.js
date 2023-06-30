@@ -19,6 +19,7 @@ bot.command("iphone", async (ctx) => {
     setInterval(async () => {
       const offers = await scrape.init();
       for (let i = 0; i < offers.length; i++) {
+        if (offers[i].store.includes("livre")) continue;
         if (offers[i].price === offer.price) continue;
         offer = offers[i];
         ctx.reply(

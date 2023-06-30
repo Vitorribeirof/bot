@@ -31,7 +31,7 @@ const init = async () => {
     items[i].price = $(price).text();
   });
 
-  return items.slice(0, 1);
+  return items.slice(0, 10);
 };
 
 module.exports = { init };
